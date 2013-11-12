@@ -1,0 +1,35 @@
+<h1>Listing posts</h1>
+ 
+<table>
+  <tr>
+    <th>HQ_CO</th>
+    <th>BUREAU</th>
+    <th>OPERATINGUNIT</th>
+    <th>COUNTRY_OPERATING_UNIT</th>
+    <th>AWARDID</th>
+    
+    <th>START_DATE</th>
+    <th>END_DATE</th>
+    <th>FISCAL_YEAR</th>
+    <th>BUDGET</th>
+    <th>EXPENDITURE</th>
+    
+  </tr>
+ 
+  <% @project.each do |project| %>
+    <tr>
+      <td><%= project.HQ_CO %></td>
+      <td><%= project.BUREAU %></td>
+      <td><%= project.OPERATINGUNIT %></td>
+      <td><%= project.COUNTRY_OPERATING_UNIT %></td>
+      <td><%= project.AWARDID %></td>
+   
+      <td><%= project.START_DATE %></td>
+      <td><%= project.END_DATE %></td>
+      <td><%= project.FISCAL_YEAR %></td>
+      <td><%= project.BUDGET %></td>
+      <td><%= project.EXPENDITURE %></td>
+  
+    </tr>
+  <% end %>
+</table>
