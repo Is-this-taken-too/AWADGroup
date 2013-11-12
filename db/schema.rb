@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20131112133842) do
 
-  create_table "project", :id => false, :force => true do |t|
+  create_table "projects", :force => true do |t|
     t.string  "HQ_CO",                  :limit => 2
     t.string  "BUREAU",                 :limit => 7
     t.string  "OPERATINGUNIT",          :limit => 30
