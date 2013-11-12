@@ -1,7 +1,12 @@
 class MainController < ApplicationController
-def index
-	@project = Project.all
-	@project.encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
+def donors
+	donors = Donors.all
+	@donorsRegularTotal = donors.sum(:REGULAR)
+	@donorsOtherTotal = donors.sum(:OTHER)
+	@donorsTotal = donors.sum(:TOTAL)
+	
+	
+	
 end
 
 end
