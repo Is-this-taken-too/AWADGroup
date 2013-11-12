@@ -1,54 +1,11 @@
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-</head>
-<body>
-<div id="container" style="width:100%; height:400px;"></div>
-<script>
-$(function () {
-    $('#container').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false
-        },
-        title: {
-            text: 'Browser market shares at a specific website, 2010'
-        },
-        tooltip: {
-    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    color: '#000000',
-                    connectorColor: '#000000',
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
-        }]
-    });
-});
-</script>
-</body>
-    
+<body style="background-color:blue;">
+<div id="body" align="center" >
+<%= image_tag("UNDPLogo.png") %> <h1>The United Nations Development Program</h1><br />
+<div id="text" ><p>Hello and welcome to this collaborative project for CS2012. We are pleased to welcome you. Here, we have taken lots of data from the UNDP, and present it to you on this site. We have information on the vast (>5200!) number of projects being undertaken by the UNDP, but also crucially the financial contribution of more well off countries. If you don't know what the UNDP is, please watch this short informative video below.</p></div>
+<iframe src="http://www.youtube.com/embed/Vu2wwn7R5RE?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" width="635" height="353"></iframe><br />
+<div id="text"> <p>Check them out on social media!</p></div>
+<div id="padder" class="padder">
+	<div id="facebook" class="socialmedia"><%= link_to image_tag("facebook.png"), "http://facebook.com/undp" %></div>
+	<div id="twitter" class="socialmedia"><%= link_to image_tag("twitter.png"), "http://twitter.com/undp" %></div>
+	<div id="youtube" class="socialmedia"><%= link_to image_tag("youtube.png"), "http://www.youtube.com/user/undp/featured" %></div>
+</div>
