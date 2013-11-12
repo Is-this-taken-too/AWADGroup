@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(:version => 20131112133842) do
 
+  create_table "donors", :force => true do |t|
+    t.string  "DONOR",   :limit => 30
+    t.string  "ABBREV",  :limit => 3
+    t.decimal "REGULAR",               :precision => 15, :scale => 0
+    t.decimal "OTHER",                 :precision => 15, :scale => 0
+    t.decimal "TOTAL",                 :precision => 15, :scale => 0
+  end
+
   create_table "projects", :force => true do |t|
     t.string  "HQ_CO",                  :limit => 2
     t.string  "BUREAU",                 :limit => 7
