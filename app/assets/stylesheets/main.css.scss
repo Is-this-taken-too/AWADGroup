@@ -1,3 +1,40 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#text {
+background-color:#CCFFFF;
+width:635px;
+}
+
+#text p{
+text-align:justify;
+font:lucida;
+
+}
+
+.padder {
+  
+    padding: 4px;
+    overflow:hidden
+}
+
+.socialmedia img {
+width:60px;
+height:60px;
+}
+
+.socialmedia{
+display:inline-block;
+margin: 0;
+padding: 4px 8px;
+float:center
+}
+
+#twitterfeed{
+float:right;
+position:absolute;
+right:0;
+top:0;
+width:300px;
+}
