@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20131112133842) do
     t.string  "OPERATINGUNIT",          :limit => 30
     t.string  "COUNTRY_OPERATING_UNIT", :limit => 44
     t.integer "AWARDID",                :limit => 5
-    t.string  "AWARD_TITLE",            :limit => 56
-    t.string  "AWARD_DESCRIPTION"
+    t.string  "AWARD_TITLE",            :limit => nil
+    t.string  "AWARD_DESCRIPTION",      :limit => nil
     t.text    "START_DATE"
     t.text    "END_DATE"
     t.integer "FISCAL_YEAR",            :limit => 4
