@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #text {
-background-color:white;
+background-color:#CCFFFF;
 width:635px;
 }
 
@@ -29,4 +29,12 @@ display:inline-block;
 margin: 0;
 padding: 4px 8px;
 float:center
+}
+
+#twitterfeed{
+float:right;
+position:absolute;
+right:0;
+top:0;
+width:300px;
 }
