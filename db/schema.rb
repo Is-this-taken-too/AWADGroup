@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20131112133842) do
     t.integer "AWARDID",                :limit => 5
     t.string  "AWARD_TITLE",            :limit => 56
     t.string  "AWARD_DESCRIPTION"
-    t.date    "START_DATE",             :limit => 10
-    t.date    "END_DATE",               :limit => 10
+    t.text    "START_DATE"
+    t.text    "END_DATE"
     t.integer "FISCAL_YEAR",            :limit => 4
     t.string  "BUDGET",                 :limit => 13
     t.string  "EXPENDITURE",            :limit => 13
