@@ -16,5 +16,16 @@ class ProjectController < ApplicationController
 		@project= Project.find(:all, :conditions => ["COUNTRY_OPERATING_UNIT LIKE ?", "%#{params[:key]}%"])
 	end
 	
+	def admin
+		if session[:user_id] != nil
+    
+			@project = Project.all
+			
+		else 
+			@project = "Please log in"
+
+		end
+	end
+	
 
 end
