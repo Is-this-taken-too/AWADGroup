@@ -1,7 +1,11 @@
 <!DOCTYPEhtml>
 <html>
 <head>
-  <title>Group</title>
+<% if content_for?(:head) %>
+	<%= content_for(:head) %>
+<% else %>
+	<title>UNDP</title>
+<% end %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
