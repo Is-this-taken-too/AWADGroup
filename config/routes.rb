@@ -1,5 +1,15 @@
 Group::Application.routes.draw do
 
+  get "log_in" => "users#login", :as => "log_in" 
+  get "project" => "project#index" 
+  get "log_out" => "users#logout", :as => "log_out"  
+  get "sign_up" => "users#new", :as => "sign_up"  
+  root :to => "users#new"  
+  resources :users do 
+	post 'process_login', :on => :collection 
+  end
+
+
 
 
   # The priority is based upon order of creation:

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131112133842) do
+ActiveRecord::Schema.define(:version => 20131114130233) do
 
   create_table "donors", :force => true do |t|
     t.string  "DONOR",   :limit => 30
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20131112133842) do
     t.integer "FISCAL_YEAR",            :limit => 4
     t.string  "BUDGET",                 :limit => 13
     t.string  "EXPENDITURE",            :limit => 13
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end
