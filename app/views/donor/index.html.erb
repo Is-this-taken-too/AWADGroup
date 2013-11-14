@@ -48,7 +48,64 @@ $(function () {
     });
 });
 </script><br/>
-
+<div id="container4" style="width:800px; height:400px;"></div>
+<script>
+$(function () {
+        $('#container4').highcharts({
+            chart: {
+                type: 'column',
+                
+            },
+            title: {
+                text: 'Regular donations made by contributing countries, 2013'
+            },
+            xAxis: {
+                categories: [
+		<% @donors.each do |value| %>
+                    '<%= value.DONOR %>',
+		    <% end %>
+                ],
+                labels: {
+                    rotation: -45,
+                    align: 'right',
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Donation amount ($million)'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                pointFormat: 'Donation Amount: <b>${point.y:.1f} million </b>',
+            },
+            series: [{
+                name: 'Donation Amount ($)',
+                data: [<% @donors.each do |value| %><%= value.REGULAR/1000000 %>, <% end %>],
+		dataLabels: {
+                    enabled: false,
+                    rotation: -90,
+                    color: '#FFFFFF',
+                    align: 'right',
+                    x: 4,
+                    y: 10,
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif',
+                        textShadow: '0 0 3px black'
+                    }
+                }
+            }]
+        });
+    });
+</script><br />
 <div id="container2" style="width:800px; height:400px;"></div>
 <script>
 $(function () {
@@ -88,7 +145,64 @@ $(function () {
     });
 });
 </script><br/>
-
+<div id="container5" style="width:800px; height:400px;"></div>
+<script>
+$(function () {
+        $('#container5').highcharts({
+            chart: {
+                type: 'column',
+                
+            },
+            title: {
+                text: 'One Off made by contributing countries, 2013'
+            },
+            xAxis: {
+                categories: [
+		<% @donors.each do |value| %>
+                    '<%= value.DONOR %>',
+		    <% end %>
+                ],
+                labels: {
+                    rotation: -45,
+                    align: 'right',
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Donation amount ($million)'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                pointFormat: 'Donation Amount: <b>${point.y:.1f} million </b>',
+            },
+            series: [{
+                name: 'Donation Amount ($)',
+                data: [<% @donors.each do |value| %><%= value.OTHER/1000000 %>, <% end %>],
+		dataLabels: {
+                    enabled: false,
+                    rotation: -90,
+                    color: '#FFFFFF',
+                    align: 'right',
+                    x: 4,
+                    y: 10,
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif',
+                        textShadow: '0 0 3px black'
+                    }
+                }
+            }]
+        });
+    });
+</script><br />
 <div id="container3" style="width:800px; height:400px; align:center;"></div>
 <script>
 $(function () {
@@ -127,4 +241,62 @@ $(function () {
         }]
     });
 });
-</script>
+</script><br />
+<div id="container6" style="width:800px; height:400px;"></div>
+<script>
+$(function () {
+        $('#container6').highcharts({
+            chart: {
+                type: 'column',
+                
+            },
+            title: {
+                text: 'Total donations made by contributing countries, 2013'
+            },
+            xAxis: {
+                categories: [
+		<% @donors.each do |value| %>
+                    '<%= value.DONOR %>',
+		    <% end %>
+                ],
+                labels: {
+                    rotation: -45,
+                    align: 'right',
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Donation amount ($million)'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                pointFormat: 'Donation Amount: <b>${point.y:.1f} million </b>',
+            },
+            series: [{
+                name: 'Donation Amount ($)',
+                data: [<% @donors.each do |value| %><%= value.TOTAL/1000000 %>, <% end %>],
+		dataLabels: {
+                    enabled: false,
+                    rotation: -90,
+                    color: '#FFFFFF',
+                    align: 'right',
+                    x: 4,
+                    y: 10,
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif',
+                        textShadow: '0 0 3px black'
+                    }
+                }
+            }]
+        });
+    });
+</script><br />
