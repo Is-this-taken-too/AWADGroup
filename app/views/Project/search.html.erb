@@ -1,0 +1,29 @@
+
+<table>
+  <tr>
+    <th>Contry</th>
+    <th>Award</th>
+    <th>Award Description</th>
+    <th>Start Date</th>
+    <th>End date</th>
+	<th>Budget</th>
+	<th>Expenditure</th>
+  </tr>
+
+<% @project.each do |project| %>
+  <tr>
+    <td><%= project.COUNTRY_OPERATING_UNIT %></td>
+    <td><%= project.AWARD_TITLE %></td>
+	<td><%= project.AWARD_DESCRIPTION %></td>
+	<td><%= project.START_DATE %></td>
+	<td><%= project.END_DATE %></td>
+	<td><%= project.BUDGET %></td>	
+	<td><%= project.EXPENDITURE %></td>
+	
+  </tr>
+ 
+<% end %>
+</table>
+
+
+<%= link_to 'Back', project_path %>

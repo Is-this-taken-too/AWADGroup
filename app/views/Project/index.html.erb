@@ -1,16 +1,13 @@
+<body style="background-color:#CCFFFF;">
+
 <div id="text">
 <h1>Projects</h1>
 </div>
 
-
-
 <!-- just some functions we can use in the final version -->
-<div>
 
 
-</div>
-
-<div>
+<div id="body">
 <table>
   <tr>
     <th>Contry</th>
@@ -41,3 +38,17 @@
 <a class="twitter-timeline" href="https://twitter.com/UNDP" data-widget-id="400299854271758337">Tweets by @UNDP</a> 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 -->
+
+<div>
+<h3>Search for awards by country </h3>
+	<form action ="project/search" method="post">
+		<input name = "key" type="input" />
+		<input value="Send" type="submit"/>
+	</form> 
+
+<div align="right">
+You are logged in as <%= @user %>
+<%= link_to 'Admin Log In', log_in_path %>
+<%= link_to 'Home', "/main" %>
+</div>
+</div>
